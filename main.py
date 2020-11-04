@@ -13,15 +13,15 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
 	elif message.text.lower() == "admin":
 		bot.send_message(message.from_user.id, "Введите пароль")
-		if message.text.lower() == "db0605":
-			bot.send_message(message.from_user.id, "Босс,все под контролем!")
-			bot.send_message(message.from_user.id, "Что выберете?Кофе,чай или водку?")
-				if message.text.lower() == "водку":
-					bot.send_message(message.from_user.id, "Отлично босс!")
-				else:
-					bot.send_message(message.from_user.id, "Паршивый выбор")
+	if message.text.lower() == "db0605":
+		bot.send_message(message.from_user.id, "Босс,все под контролем!")
+		bot.send_message(message.from_user.id, "Что выберете?Кофе,чай или водку?")
+		if message.text.lower() == "водку":
+			bot.send_message(message.from_user.id, "Отлично босс!")
 		else:
-			bot.send_message(message.from_user.id, "Иди нахуй ,ты не босс!")
+			bot.send_message(message.from_user.id, "Паршивый выбор")
+	else:
+		bot.send_message(message.from_user.id, "Иди нахуй ,ты не босс!")
 					
 			
 	
