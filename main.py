@@ -16,7 +16,8 @@ def send_welcome(message):
 	if 'лох' in message.text.lower():
 		bot.send_message(message.from_user.id, "Лошара твоя мамка!")
 @bot.message_handler(commands=['admin'])
-def admin_command(message):
-	bot.send_message(message.from_user.id, "Введите пароль")
+def start_command(message):
+	bot.send_message(message.chat.id,'Введите пароль для этого нажмите /parol')
+	
 
 bot.polling(none_stop = True)
