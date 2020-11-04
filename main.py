@@ -11,17 +11,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-	elif message.text.lower() == "admin":
-		bot.send_message(message.from_user.id, "Введите пароль")
-		if message.text.lower() == password:
-			bot.send_message(message.from_user.id, "Босс,все под контролем!")
-			bot.send_message(message.from_user.id, "Что выберете?Кофе,чай или водку?")
-			if message.text.lower() == "водку":
-				bot.send_message(message.from_user.id, "Отлично босс!")
-			else:
-				bot.send_message(message.from_user.id, "Паршивый выбор")
-		else:
-			continue
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
