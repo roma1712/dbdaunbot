@@ -12,8 +12,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-	elif message.text.lower() == "сам":
-		bot.send_message(message.from_user.id, "Мамке своей сам скажи аут")
 	elif message.text.lower() == "даун":
 		bot.send_message(message.from_user.id, "Ты нахуя своей сдохшей мамке говоришь про себя?")
 	elif message.text.lower() == "иди нахуй":
@@ -28,6 +26,18 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Похуй будешь говорить на похронах мамаши...")
 	elif 'сам' in message.text.lower():
 		bot.send_message(message.from_user.id, "сам"*10)
+	elif 'люблю' in message.text.lower():
+		bot.send_message(message.from_user.id, "Я тебя тоже люблю)))))")
+	elif 'лиза' in message.text.lower():
+		bot.send_message(message.from_user.id, "Какая Лиза:Хлопкова,Волгапкина или Бурдейная")
+	elif 'лизу' in message.text.lower():
+		bot.send_message(message.from_user.id, "Какую Лизу : Хлопкову , Волгапкину или Бурдейную")
+	elif 'настя' in message.text.lower():
+		bot.send_message(message.from_user.id, "Чо за Настя?")
+	elif 'зеленская' in message.text.lower():ю
+		bot.send_message(message.from_user.id, "Если ты реально она , звони ")
+	elif 'дай номер' in message.text.lower():
+		bot.send_message(message.from_user.id, "Напиши мне : https://vk.com/didibek")
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	
