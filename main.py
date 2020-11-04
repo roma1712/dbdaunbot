@@ -34,7 +34,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Какую Лизу : Хлопкову , Волгапкину или Бурдейную")
 	elif 'настя' in message.text.lower():
 		bot.send_message(message.from_user.id, "Чо за Настя?")
-	elif 'зеленская' in message.text.lower():ю
+	elif 'зеленская' in message.text.lower():
 		bot.send_message(message.from_user.id, "Если ты реально она , звони ")
 	elif 'дай номер' in message.text.lower():
 		bot.send_message(message.from_user.id, "Напиши мне : https://vk.com/didibek")
