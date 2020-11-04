@@ -17,11 +17,11 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Лошара твоя мамка!")
 @bot.message_handler(commands=['admin'])
 def admin_command(message):
-		bot.send_message(message.from_user.id, "Введите пароль")
-		if message.text.lower() == "db0605":
-			bot.send_message(message.from_user.id, "Босс все в норме , вам кофе чай или водку?")
+	bot.send_message(message.from_user.id, "Введите пароль")
+	if message.text.lower() == "db0605":
+		bot.send_message(message.from_user.id, "Босс все в норме , вам кофе чай или водку?")
 		
-		else:
-			bot.send_message(message.from_user.id, "Вы не босс!")
+	else:
+		bot.send_message(message.from_user.id, "Вы не босс!")
 
 bot.polling(none_stop = True)
