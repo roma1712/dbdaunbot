@@ -36,8 +36,16 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Чо за Настя?")
 	elif 'зеленская' in message.text.lower():
 		bot.send_message(message.from_user.id, "Если ты реально она , звони ")
-	elif 'дай номер' in message.text.lower():
-		bot.send_message(message.from_user.id, "Напиши мне")
+	elif 'хлопкову' in message.text.lower():
+		bot.send_message(message.from_user.id, "Я ее тоже люблю ,брат,стрела тебе")
+	elif 'волгапкину' in message.text.lower():
+		bot.send_message(message.from_user.id, "Сочувствую")
+	elif 'бурдейную' in message.text.lower():
+		bot.send_message(message.from_user.id, "АХАХАХАХАХАХА ну и уебище ты")
+	elif '/start' in message.text.lower():
+		bot.send_message(message.from_user.id, "ахахах уебище думало нажмешь старт все заработает?Сын шлюханки...")
+	elif 'ты' in message.text.lower():
+		bot.send_message(message.from_user.id, "давай ТЫ пойдешь нахуй выродок")
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	
