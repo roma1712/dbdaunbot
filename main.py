@@ -13,7 +13,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
 	elif message.text.lower() == "/admin":
 		bot.send_message(message.from_user.id, "Введите пароль")
-		bot.register_next_stand_handler(message.from_user.id, get(/admin))
+		bot.send_message(message.from_user.id, get(/admin))
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
