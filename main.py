@@ -18,6 +18,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Вводи")
 		if message.text() == "db0605":
 			bot.send_message(message.from_user.id, "Босс все в норме")
+			return
 		else:
 			bot.send_message(message.from_user.id, "Ты не босс иди нахуй!")
 	else:
