@@ -7,13 +7,12 @@ bot = telebot.TeleBot("1424440257:AAGsf3PxldRiAvLizaw362pKSQ8b8UJAW7k")
 def send_welcome(message):
 	if message.text.lower() == "я серый":
 		bot.send_message(message.from_user.id, "Мой господин!")
-	if message.text.lower() == "я рома":
+	elif message.text.lower() == "я рома":
 		bot.send_message(message.from_user.id, "Мой господин!")
-	if message.text.lower() == "я дб":
+	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-	if message.text.lower() == "admin":
+	elif message.text.lower() == "admin":
 		bot.send_message(message.from_user.id, "Введите пароль")
-		continue
 		if message.text.lower() == password:
 			bot.send_message(message.from_user.id, "Босс,все под контролем!")
 			bot.send_message(message.from_user.id, "Что выберете?Кофе,чай или водку?")
