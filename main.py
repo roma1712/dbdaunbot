@@ -13,6 +13,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
 	if message.text.lower() == "admin":
 		bot.send_message(message.from_user.id, "Введите пароль")
+		continue
 		if message.text.lower() == password:
 			bot.send_message(message.from_user.id, "Босс,все под контролем!")
 			bot.send_message(message.from_user.id, "Что выберете?Кофе,чай или водку?")
