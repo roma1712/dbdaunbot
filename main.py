@@ -25,7 +25,7 @@ def send_welcome(message):
 	elif 'похуй' in message.text.lower():
 		bot.send_message(message.from_user.id, "Похуй будешь говорить на похронах мамаши...")
 	elif 'сам' in message.text.lower():
-		bot.send_message(message.from_user.id, "сам"*10)
+		bot.send_message(message.from_user.id, "сам")
 	elif 'люблю' in message.text.lower():
 		bot.send_message(message.from_user.id, "Я тебя тоже люблю)))))")
 	elif 'лиза' in message.text.lower():
