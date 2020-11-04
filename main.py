@@ -21,7 +21,7 @@ def send_welcome(message):
 			else:
 				bot.send_message(message.from_user.id, "Паршивый выбор")
 		else:
-			break
+			continue
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
