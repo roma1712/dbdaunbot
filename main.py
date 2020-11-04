@@ -11,22 +11,17 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-	elif message.text.lower() == "/admin":
-		bot.send_message(message.from_user.id, "Введите пароль")
-		bot.send_message(message.from_user.id, get())
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
 		bot.send_message(message.from_user.id, "Лошара твоя мамка!")
-def get(message):
-	if message.text.lower() == "db0605":
-		bot.send_message(message.from_user.id, "Босс все в норме , вам кофе чай или водку?")
-		bot.send_message(message.from_user.id, bet())
-	else:
-		bot.send_message(message.from_user.id, "Вы не босс!")
-def bet(message):
-	if message.text.lower() == "водку":
-		bot.send_message(message.from_user.id, "Отлично")
-	else:
-		bot.send_message(message.from_user.id, "Паршиво")
+@bot.message_handler(commands=['admin'])
+def admin_command(message):
+		bot.send_message(message.from_user.id, "Введите пароль")
+			if message.text.lower() == "db0605":
+				bot.send_message(message.from_user.id, "Босс все в норме , вам кофе чай или водку?")
+		
+			else:
+				bot.send_message(message.from_user.id, "Вы не босс!")
+
 bot.polling(none_stop = True)
