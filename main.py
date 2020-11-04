@@ -37,7 +37,7 @@ def send_welcome(message):
 	elif 'зеленская' in message.text.lower():
 		bot.send_message(message.from_user.id, "Если ты реально она , звони ")
 	elif 'дай номер' in message.text.lower():
-		bot.send_message(message.from_user.id, "Напиши мне : https://vk.com/didibek")
+		bot.send_message(message.from_user.id, "Напиши мне")
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	
