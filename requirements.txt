@@ -1,0 +1,6 @@
+pyTelegramBotAPI   
+requests   
+pywin32-ctypes  
+setuptools  
+six     
+urllib3   
