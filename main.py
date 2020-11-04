@@ -10,11 +10,22 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
+	elif message.text.lower() == "/admin":
+		bot.register_next_step_handler(message.from_user.id, get)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
 		bot.send_message(message.from_user.id, "Лошара твоя мамка!")
-
+def get(message):
+	bot.send_message(message.from_user.id, "Введите пароль")
+	if message.text.lower() == "db0605":
+		bot.send_message(message.from_user.id, "Босс все под контролем!Что желаете:кофе,чай или водку?")
+		if  message.text.lower() == "Водку":
+			bot.send_message(message.from_user.id, "Отлично")
+		else:
+			bot.send_message(message.from_user.id, "Паршиво")
+	else:
+		bot.send_message(message.from_user.id, "Ты не босс")
 	
 
 bot.polling(none_stop = True)
