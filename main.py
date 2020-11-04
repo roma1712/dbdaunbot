@@ -14,14 +14,14 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
 	elif  message.text == "/boss":
 		bot.send_message(message.from_user.id, "Введи пароль")
-		if 'db0605' in message.text:
-			bot.send_message(message.from_user.id, "Как вы босс?")
 			
 			
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
 		bot.send_message(message.from_user.id, "Лошара твоя мамка!")
+	elif 'db0605' in message.text:
+		bot.send_message(message.from_user.id, "Как вы босс?"
 
 	
 
