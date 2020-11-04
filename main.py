@@ -19,19 +19,12 @@ def send_welcome(message):
 	if 'лох' in message.text.lower():
 		bot.send_message(message.from_user.id, "Лошара твоя мамка!")
 def get(message):
-		bit_name()
-		ok_name()
-		
-			
-	else:
-		bot.send_message(message.from_user.id, "Вы не босс!")
-def bit_name(message):
 	if message.text.lower() == "db0605":
 		bot.send_message(message.from_user.id, "Босс все в норме , вам кофе чай или водку?")
+		bot.send_message(message.from_user.id, bet())
 	else:
 		bot.send_message(message.from_user.id, "Вы не босс!")
-	
-def ok_name(message):
+def bet(message):
 	if message.text.lower() == "водку":
 		bot.send_message(message.from_user.id, "Отлично")
 	else:
