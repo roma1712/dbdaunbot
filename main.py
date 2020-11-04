@@ -15,8 +15,8 @@ def send_welcome(message):
 			
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-	if 'db0605' in message.text.lower():
-		bot.send_message(message.from_user.id, "Как вы босс?"
+	if 'лох' in message.text.lower():
+		bot.send_message(message.from_user.id, "Закрой свой рот пидорасня ,лох только ты"
 
 	
 
