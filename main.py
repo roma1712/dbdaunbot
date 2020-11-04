@@ -1,7 +1,7 @@
 import telebot
 import constants
 
-
+password = "db0605"
 bot = telebot.TeleBot("1424440257:AAGsf3PxldRiAvLizaw362pKSQ8b8UJAW7k")
 @bot.message_handler(content_types=['text','audio','video','voice','photo','sticker'])
 def send_welcome(message):
@@ -13,7 +13,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
 	if message.text.lower() == "admin":
 		bot.send_message(message.from_user.id, "Введите пароль")
-		if message.text.lower() == "db0605":
+		if message.text.lower() == password:
 			bot.send_message(message.from_user.id, "Босс,все под контролем!")
 			bot.send_message(message.from_user.id, "Что выберете?Кофе,чай или водку?")
 			if message.text.lower() == "водку":
