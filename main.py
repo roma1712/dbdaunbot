@@ -12,15 +12,12 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-	elif message.text.lower() == "/admin":
-		bot.send_message(message.from_user.id, "Введите пароль для этого нажмите /parol")
-	elif message.text.lower() == "/parol":
-		bot.send_message(message.from_user.id, "Вводи")
-		if message.text() == "db0605":
-			bot.send_message(message.from_user.id, "Босс все в норме")
-			return
-		else:
-			bot.send_message(message.from_user.id, "Ты не босс иди нахуй!")
+	elif  message.text == "/boss":
+		bot.send_message(message.from_user.id, "Введи пароль")
+		if 'db0605' in message.text:
+			bot.send_message(message.from_user.id, "Как вы босс?")
+			
+			
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	if 'лох' in message.text.lower():
