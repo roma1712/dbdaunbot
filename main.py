@@ -12,11 +12,25 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-			
+	elif message.text.lower() == "сам":
+		bot.send_message(message.from_user.id, "Мамке своей сам скажи аут")
+	elif message.text.lower() == "даун":
+		bot.send_message(message.from_user.id, "Ты нахуя своей сдохшей мамке говоришь про себя?")
+	elif message.text.lower() == "иди нахуй":
+		bot.send_message(message.from_user.id, "i fucked cum in your mother")
+	elif message.text.lower() == "жопой нюхаешь цветы":
+		bot.send_message(message.from_user.id, "Цветок только у твоей мамаше ахахах еблан опять тебя по фактам раскидал")
+	elif message.text.lower() == "мне похуй":
+		bot.send_message(message.from_user.id, "ммм батя сдох сразу похуй стало,да?")
+	elif 'лох' in message.text.lower():
+		bot.send_message(message.from_user.id, "Закрой свой рот пидорасня ,лох только ты")
+	elif 'похуй' in message.text.lower():
+		bot.send_message(message.from_user.id, "Похуй будешь говорить на похронах мамаши...")
+	elif 'сам' in message.text.lower():
+		bot.send_message(message.from_user.id, "сам"*10)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-	if 'лох' in message.text.lower():
-		bot.send_message(message.from_user.id, "Закрой свой рот пидорасня ,лох только ты")
+	
 
 	
 
