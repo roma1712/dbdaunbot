@@ -11,7 +11,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я дб":
 		bot.send_message(message.from_user.id, "Пошел нахуй выродок!")
-	elif message.text.lower() == "/admin":
+	elif message.text.lower() == "admin":
 		bot.send_message(message.from_user.id, "Введите пароль")
 		if message.text.lower() == "db0605":
 			bot.send_message(message.from_user.id, "Босс,все под контролем!")
