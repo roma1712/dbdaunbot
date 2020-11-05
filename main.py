@@ -20,6 +20,10 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Цветок только у твоей мамаше ахахах еблан опять тебя по фактам раскидал")
 	elif message.text.lower() == "мне похуй":
 		bot.send_message(message.from_user.id, "ммм батя сдох сразу похуй стало,да?")
+	elif message.text.lower() == "мать":
+		bot.send_message(message.from_user.id, "твоя сдохла")
+	elif message.text.lower() == "мать сдохла":
+		bot.send_message(message.from_user.id, "твоя")
 	elif 'лох' in message.text.lower():
 		bot.send_message(message.from_user.id, "Закрой свой рот пидорасня ,лох только ты")
 	elif 'похуй' in message.text.lower():
@@ -48,14 +52,15 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Если ты Касаткина ,то иди нахуй блять")
 	elif 'ярослава' in message.text.lower():
 		bot.send_message(message.from_user.id, "Пусть Ярослава Нечаева скинет свои сиськи в лс")
-	elif 'Касаткина' in message.text.lower():
+	elif 'касаткина' in message.text.lower():
 		bot.send_message(message.from_user.id, "Иди нахуй Кристина блять")
-	elif 'Касаткин' in message.text.lower():
+	elif 'касаткин' in message.text.lower():
 		bot.send_message(message.from_user.id, "Он мой босс!")
-	elif 'Рома' in message.text.lower():
+	elif 'рома' in message.text.lower():
 		bot.send_message(message.from_user.id, "Он мой босс!")
 	elif 'привет' in message.text.lower():
 		bot.send_message(message.from_user.id, "Привет своей мамке скажешь")
+
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 	
