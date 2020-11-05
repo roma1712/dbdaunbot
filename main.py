@@ -45,7 +45,7 @@ def send_welcome(message):
 	elif '/start' in message.text.lower():
 		bot.send_message(message.from_user.id, "ахахах уебище думало нажмешь старт все заработает?Сын шлюханки...")
 	elif 'кристина' in message.text.lower():
-		bot.send_message(message.from_user.id, "Если ты Касаткин ,то иди нахуй блять")
+		bot.send_message(message.from_user.id, "Если ты Касаткина ,то иди нахуй блять")
 	elif 'ярослава' in message.text.lower():
 		bot.send_message(message.from_user.id, "Пусть Ярослава Нечаева скинет свои сиськи в лс")
 	elif 'Касаткина' in message.text.lower():
