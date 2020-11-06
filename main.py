@@ -30,8 +30,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Похуй будешь говорить на похронах мамаши...")
 	elif 'сам' in message.text.lower():
 		bot.send_message(message.from_user.id, "сам")
-	elif 'люблю' in message.text.lower():
-		bot.send_message(message.from_user.id, "Я тебя тоже люблю)))))")
 	elif 'лиза' in message.text.lower():
 		bot.send_message(message.from_user.id, "Какая Лиза:Хлопкова,Волгапкина или Бурдейная")
 	elif 'лизу' in message.text.lower():
@@ -46,10 +44,16 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Сочувствую")
 	elif 'бурдейную' in message.text.lower():
 		bot.send_message(message.from_user.id, "АХАХАХАХАХАХА ну и уебище ты")
+	elif 'хлопкова' in message.text.lower():
+		bot.send_message(message.from_user.id, "Я ее тоже люблю ,брат,стрела тебе")
+	elif 'волгапкина' in message.text.lower():
+		bot.send_message(message.from_user.id, "Сочувствую")
+	elif 'бурдейная' in message.text.lower():
+		bot.send_message(message.from_user.id, "АХАХАХАХАХАХА ну и уебище ты сочувствую")
 	elif '/start' in message.text.lower():
 		bot.send_message(message.from_user.id, "ахахах уебище думало нажмешь старт все заработает?Сын шлюханки...")
 	elif 'кристина' in message.text.lower():
-		bot.send_message(message.from_user.id, "Если ты Касаткина ,то иди нахуй блять")
+		bot.send_message(message.from_user.id, "Если ты Касаткина ,то иди нахуй блять тварь")
 	elif 'ярослава' in message.text.lower():
 		bot.send_message(message.from_user.id, "Пусть Ярослава Нечаева скинет свои сиськи в лс")
 	elif 'касаткина' in message.text.lower():
@@ -60,6 +64,12 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Он мой босс!")
 	elif 'привет' in message.text.lower():
 		bot.send_message(message.from_user.id, "Привет своей мамке скажешь")
+	elif len(message.text.lower()) == 1:
+		bot.send_message(message.from_user.id, "Господи сын шлюхи,сдохшей в канаве и умертвленной твоим отчимом,соизволь написать побольше букв")
+	elif message.text.lower() == "я ярик":
+		bot.send_message(message.from_user.id, "Мой господин!")
+	elif message.text.lower() == "я лиза хлопкова":
+		bot.send_message(message.from_user.id, "Моя королева!")
 
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
