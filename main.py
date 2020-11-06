@@ -68,7 +68,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я лиза хлопкова":
 		bot.send_message(message.from_user.id, "Моя королева!")
-	if len(message.text.lower()) == 1:
+	elif len(message.text.lower()) == 1:
 		bot.send_message(message.from_user.id, "Господи сын шлюхи,сдохшей в канаве и умертвленной твоим отчимом,соизволь написать побольше букв")
 
 	else:
