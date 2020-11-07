@@ -151,24 +151,24 @@ def ques6(message):
 	else:
 		score += 0
 
-if score == 0:
-	bot.send_message(message.chat.id, "Вы прошли на 0 очков.Ужасно!")
-	bot.register_next_step_handler(message, send_welcome)
-if score == 1:
-	bot.send_message(message.chat.id, "Вы прошли на 1 очков.Отвратительно!")
-	bot.register_next_step_handler(message, send_welcome)
-if score == 2:
-	bot.send_message(message.chat.id, "Вы прошли на 2 очков.Такое себе!")
-	bot.register_next_step_handler(message, send_welcome)
-if score == 3:
-	bot.send_message(message.chat.id, "Вы прошли на 3 очков.Нормально!")
-	bot.register_next_step_handler(message, send_welcome)
-if score == 4:
-	bot.send_message(message.chat.id, "Вы прошли на 0 очков.Отлично!")
-	bot.register_next_step_handler(message, send_welcome)
-if score == 5:
-	bot.send_message(message.chat.id, "Вы прошли на 0 очков.Я не знаю как тебя зовут,но уже люблю тебя!")
-	bot.register_next_step_handler(message, send_welcome)
+	if score == 0:
+		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Ужасно!")
+		bot.register_next_step_handler(message, send_welcome)
+	elif score == 1:
+		bot.send_message(message.chat.id, "Вы прошли на 1 очков.Отвратительно!")
+		bot.register_next_step_handler(message, send_welcome)
+	elif score == 2:
+		bot.send_message(message.chat.id, "Вы прошли на 2 очков.Такое себе!")
+		bot.register_next_step_handler(message, send_welcome)
+	elif score == 3:
+		bot.send_message(message.chat.id, "Вы прошли на 3 очков.Нормально!")
+		bot.register_next_step_handler(message, send_welcome)
+	elif score == 4:
+		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Отлично!")
+		bot.register_next_step_handler(message, send_welcome)
+	elif score == 5:
+		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Я не знаю как тебя зовут,но уже люблю тебя!")
+		bot.register_next_step_handler(message, send_welcome)
 
 
 
