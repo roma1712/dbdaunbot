@@ -98,13 +98,12 @@ qs1 = ""
 vr1 = ""
 an1 = ""
 vb = ".Выберете только цифру"
-
+ol = ","
+sumsa = ""
 
 def func(message):
 	global quess
-	global  name_test
-	quess = message.text.lower()
-	name_test += quess
+	name_test += quess + ol
 	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
 	bot.register_next_step_handler(message, fun)
 
@@ -126,10 +125,15 @@ def funs(message):
 
 def fuck(message):
 	global an1
+	
+	global name_test
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
+	name_test += quess + ol
+
+	
 def sam(message,quess,qs1,vr1):
-	bot.send_message(message.chat.id, str(quess + qs1 + vr1 + vb))
+	bot.send_message(message.chat.id, str(qs1),str(vr1)
 	proverka
 	if score == 0:
 		bot.send_message(message.chat.id, "Плохо")
