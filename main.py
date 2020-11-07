@@ -2,78 +2,11 @@ import telebot
 import constants
 from requests import get
 
-
-achieve = ""
-score = 0
-guess1 = ""
-guess2 = ""
-guess3 = ""
-guess4 = ""
-guess5 = ""
 bot = telebot.TeleBot("1424440257:AAGsf3PxldRiAvLizaw362pKSQ8b8UJAW7k")
 
 
 @bot.message_handler(content_types=['text', 'audio', 'video', 'voice', 'photo', 'sticker'])
 def send_welcome(message):
-	if message.text.lower() == "/тестромакасаткин":
-		bot.send_message(message.chat.id, "Вопроc 1:Какой любимый день недели?")
-		bot.register_next_step_handler(message,ques2)
-	else:
-		bot.register_next_step_handler(message, cot)
-def ques2(message):
-	global score
-	guess1 = message.text.lower()
-	if guess1 == "суббота":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-		bot.register_next_step_handler(message, ques3)
-	else:
-		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-		bot.register_next_step_handler(message, ques3)
-def ques3(message):
-	global score
-	quess2 = message.text.lower()
-	if quess2 == "ночь":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-		bot.register_next_step_handler(message, ques4)
-	else:
-		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-		bot.register_next_step_handler(message, ques4)
-def ques4(message):
-	global score
-	quess3 = message.text.lower()
-	if quess3 == "кофе":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-		bot.register_next_step_handler(message, ques5)
-	else:
-		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-		bot.register_next_step_handler(message, ques5)
-def ques5(message):
-	global score
-	quess4 = message.text.lower()
-	if quess4 == "деньги":
-		score += 1
-		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-		bot.register_next_step_handler(message, ques6)
-	else:
-		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-		bot.register_next_step_handler(message, ques6)
-def ques6(message):
-	global score
-	global achieve
-	quess5 = message.text.lower()
-	if quess5 == "черный":
-		score += 1
-		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
-		achieve = "Тест Ромы пройден на", score, "очков"
-		bot.register_next_step_handler(message, cot)
-	else:
-		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
-		achieve = "Тест Ромы пройден на", score, "очков"
-		bot.register_next_step_handler(message, cot)
-def cot(message):
 	if message.text.lower() == "я серый":
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я рома":
