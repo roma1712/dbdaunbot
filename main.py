@@ -134,7 +134,7 @@ def fuck(message):
 	
 def sam(message,quess,qs1,vr1):
 	bot.send_message(message.chat.id, (str(qs1),str(vr1)))
-	proverka
+	bot.register_next_step_handler(message,proverka())
 	if score == 0:
 		bot.send_message(message.chat.id, "Плохо")
 	elif score == 1:
