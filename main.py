@@ -142,9 +142,12 @@ def ques6(message):
 	if quess5 == "черный":
 		score += 1
 		bot.send_message(message.chat.id, "Вы набрали", score, "очков!")
+		bot.register_next_step_handler(message, send_welcome)
 		achieve = "Тест Ромы пройден на", score, "очков"
+		
 	else:
 		bot.send_message(message.chat.id, "Вы набрали", score, "очков!")
+		bot.register_next_step_handler(message, send_welcome)
 		achieve = "Тест Ромы пройден на", score, "очков"
 	
 
