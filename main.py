@@ -99,68 +99,56 @@ def ques2(message):
 	global score
 	guess1 = message.text.lower()
 	still = True
-	while still:
-		if guess1 == "суббота" :
-			score += 1
-			bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-			bot.register_next_step_handler(message, ques3)
-			still = False 
-		else:
-			bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-			bot.register_next_step_handler(message, ques3)
+	if guess1 == "суббота" :
+		score += 1
+		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
+		bot.register_next_step_handler(message, ques3)
+	else:
+		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
+		bot.register_next_step_handler(message, ques3)
 def ques3(message):
-	global score
 	quess2 = message.text.lower()
-	while still:
-		if quess2 == "ночь":
-			score += 1
-			bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-			bot.register_next_step_handler(message, ques4)
-			still = False
-		else:
+	if quess2 == "ночь":
+		score += 1
+		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
+		bot.register_next_step_handler(message, ques4)
+	else:
 		
-			bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-			bot.register_next_step_handler(message, ques4)
+		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
+		bot.register_next_step_handler(message, ques4)
 def ques4(message):
-	global score
 	quess3 = message.text.lower()
-	while still:
-		if quess3 == "кофе":
-			score += 1
-			bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-			bot.register_next_step_handler(message, ques5)
-			still = False
-		else:
-			bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-			bot.register_next_step_handler(message, ques5)
+	if quess3 == "кофе":
+		score += 1
+		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
+		bot.register_next_step_handler(message, ques5)
+	
+	else:
+		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
+		bot.register_next_step_handler(message, ques5)
 def ques5(message):
-	global score
-	quess4 = message.text.lower()
-	while still:	
-		if quess4 == "деньги":
-			score += 1
-			bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-			bot.register_next_step_handler(message, ques6)
-			still = False
-		else:
-			bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-			bot.register_next_step_handler(message, ques6)
+	
+	quess4 = message.text.lower()	
+	if quess4 == "деньги":
+		score += 1
+		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
+		bot.register_next_step_handler(message, ques6)
+	else:
+		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
+		bot.register_next_step_handler(message, ques6)
 def ques6(message):
-	global score
+	
 	global achieve
 	quess5 = message.text.lower()
-	while still:
-		if quess5 == "черный":
-			score += 1
-			bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
-			bot.register_next_step_handler(message, send_welcome)
-			achieve = "Тест Ромы пройден на", str(score), "очков"
-			still = False
-			
-		else:
-			bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
-			bot.register_next_step_handler(message, send_welcome)
-			achieve = "Тест Ромы пройден на", str(score), "очков"
+	if quess5 == "черный":
+		score += 1
+		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
+		bot.register_next_step_handler(message, send_welcome)
+		achieve = "Тест Ромы пройден на", str(score), "очков"	
+	else:
+		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
+		bot.register_next_step_handler(message, send_welcome)
+		achieve = "Тест Ромы пройден на", str(score), "очков"
 	
 
 
