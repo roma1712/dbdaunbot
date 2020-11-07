@@ -30,8 +30,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Похуй будешь говорить на похронах мамаши...")
 	elif 'сам' in message.text.lower():
 		bot.send_message(message.from_user.id, "сам")
-	elif 'лиза' in message.text.lower():
-		bot.send_message(message.from_user.id, "Какая Лиза:Хлопкова,Волгапкина или Бурдейная")
 	elif 'лизу' in message.text.lower():
 		bot.send_message(message.from_user.id, "Какую Лизу : Хлопкову , Волгапкину или Бурдейную")
 	elif 'настя' in message.text.lower():
