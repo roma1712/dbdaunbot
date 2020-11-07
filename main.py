@@ -58,6 +58,10 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я лиза хлопкова":
 		bot.send_message(message.from_user.id, "Моя королева!")
+	elif message.text.lower() == "привет":
+		audio = open(r'C:\Users\Lenovo\Downloads\a85c2fe0bd.mp3', 'rb')
+		bot.send_audio(message.chat.id, audio)
+		audio.close()
 	elif len(message.text.lower()) == 1:
 		bot.send_message(message.from_user.id, "Господи сын шлюхи,сдохшей в канаве и умертвленной твоим отчимом,соизволь написать побольше букв")
 	elif 'бокс' in message.text.lower():
