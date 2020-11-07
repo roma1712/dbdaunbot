@@ -87,6 +87,7 @@ def send_welcome(message):
 			bot.send_message(message.chat.id, sam())
 		
 	elif message.text.lower() == "/свойтест":
+		bot.send_message(message.chat.id,"Напишите как будет называться ваш тест.Обязательно через / ,маленькими буквами.Например : /тестромы ,без пробела!!!")              
 		bot.register_next_step_handler(message,func)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
@@ -102,8 +103,6 @@ an1 = ""
 def func(message):
 	global quess
 	global  name_test
-	bot.send_message(message.chat.id,
-                     "Напишите как будет называться ваш тест.Обязательно через / ,маленькими буквами.Например : /тестромы ,без пробела!!!")
 	quess = message.text.lower()
 	name_test = quess
 	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
