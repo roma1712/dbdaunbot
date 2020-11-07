@@ -84,7 +84,7 @@ def send_welcome(message):
 	elif message.text.lower() == "/всетесты":
 		bot.send_message(message.chat.id, name_test)
 		if message.text.lower() == quess:
-			bot.send_message(message.chat.id, sam())
+			bot.send_message(message.chat.id, sam(func()))
 		
 	elif message.text.lower() == "/свойтест":
 		bot.send_message(message.chat.id,"Напишите как будет называться ваш тест.Обязательно через / ,маленькими буквами.Например : /тестромы ,без пробела!!!")              
@@ -129,7 +129,6 @@ def fuck(message):
 	global test
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
-	test += func
 def sam(message,quess,qs1,vr1):
 	bot.send_message(message.chat.id, quess + qs1 +vr1)
 	proverka()
