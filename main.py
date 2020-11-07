@@ -71,77 +71,75 @@ def send_welcome(message):
 	elif '/лейла' in message.text.lower():
 		bot.send_photo(message.from_user.id,get("https://sun9-66.userapi.com/4QthDe5aDLzXfgNScobMx8CBjAsSQ_Tinpe0uQ/HVKcmwslhe8.jpg").content)
 		bot.send_message(message.from_user.id,"Лейла Обухова , inst:lil_lleyla, VK:https://vk.com/leylek_17")
+	elif message.text.lower() == "/achieve":
+		bot.send_message(message.chat.id, achieve)
+	elif message.text.lower() == "/тестромакасаткин":
+		achieve = ""
+		score = 0
+		guess1 = ""
+		guess2 = ""
+		guess3 = ""
+		guess4 = ""
+		guess5 = ""
+		bot.send_message(message.chat.id,"Вопроc 1:Какой любимый день недели?")
+		bot.register_next_step_handler(message,ques2)		
+		def ques2(message):
+			global score
+			guess1 = message.text.lower()
+			if guess1 == "суббота":
+				score += 1
+				bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
+				bot.register_next_step_handler(message, ques3)
+			else:
+				bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
+				bot.register_next_step_handler(message, ques3)
+		def ques3(message):
+			global score
+			quess2 = message.text.lower()
+			if quess2 == "ночь":
+				score += 1
+				bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
+				bot.register_next_step_handler(message, ques4)
+			else:
+				bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
+				bot.register_next_step_handler(message, ques4)
 
+		def ques4(message):
+			global score
+			quess3 = message.text.lower()
+			if quess3 == "кофе":
+				score += 1
+				bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
+				bot.register_next_step_handler(message, ques5)
+			else:
+				bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
+				bot.register_next_step_handler(message, ques5)
+		def ques5(message):
+			global score
+			quess4 = message.text.lower()
+			if quess4 == "деньги":
+				score += 1
+				bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
+				bot.register_next_step_handler(message, ques6)
+			else:
+				bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
+				bot.register_next_step_handler(message, ques6)
+		def ques6(message):
+			global score
+			global achieve
+			quess5 = message.text.lower()
+			if quess5 == "черный":
+				score += 1
+				bot.send_message(message.chat.id, "Вы набрали" ,str(score),"очков!")
+				achieve = "Тест Ромы пройден на",score,"очков"
+			else:
+				bot.send_message(message.chat.id, "Вы набрали" ,str(score),"очков!")
+				achieve = "Тест Ромы пройден на", score, "очков"
 	
 
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-achieve = ""
-score = 0
-guess1 = ""
-guess2 = ""
-guess3 = ""
-guess4 = ""
-guess5 = ""
-def ques1(message):
-	if message.text.lower() == "/тестромакасаткин":
-		bot.send_message(message.chat.id,"Вопроc 1:Какой любимый день недели?")
-		bot.register_next_step_handler(message,ques2)
-def ques2(message):
-	global score
-	guess1 = message.text.lower()
-	if guess1 == "суббота":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-		bot.register_next_step_handler(message, ques3)
-	else:
-		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-		bot.register_next_step_handler(message, ques3)
-def ques3(message):
-	global score
-	quess2 = message.text.lower()
-	if quess2 == "ночь":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-		bot.register_next_step_handler(message, ques4)
-	else:
-		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-		bot.register_next_step_handler(message, ques4)
 
-def ques4(message):
-	global score
-	quess3 = message.text.lower()
-	if quess3 == "кофе":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-		bot.register_next_step_handler(message, ques5)
-	else:
-			bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-			bot.register_next_step_handler(message, ques5)
-def ques5(message):
-	global score
-	quess4 = message.text.lower()
-	if quess4 == "деньги":
-		score += 1
-		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-		bot.register_next_step_handler(message, ques6)
-	else:
-		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-		bot.register_next_step_handler(message, ques6)
-def ques6(message):
-	global score
-	global achieve
-	quess5 = message.text.lower()
-	if quess5 == "черный":
-		score += 1
-		bot.send_message(message.chat.id, "Вы набрали" ,str(score),"очков!")
-		achieve = "Тест Ромы пройден на",score,"очков"
-	else:
-		bot.send_message(message.chat.id, "Вы набрали" ,str(score),"очков!")
-		achieve = "Тест Ромы пройден на", score, "очков"
-def welc(message):
-	if message.text.lower() == "/achieve":
-		bot.send_message(message.chat.id, achieve)
 
 	
 
