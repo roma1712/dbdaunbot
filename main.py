@@ -97,14 +97,15 @@ quess = ""
 qs1 = ""
 vr1 = ""
 an1 = ""
-vb = ".Выберете только цифру"
-ol = ","
-sumsa = ""
+
+
+
 
 def func(message):
 	global quess
 	global name_test
-	name_test += quess + ol
+	guess = message.text.lower()
+	name_test += quess 
 	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
 	bot.register_next_step_handler(message, fun)
 
