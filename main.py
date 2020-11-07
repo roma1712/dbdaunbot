@@ -76,7 +76,7 @@ def send_welcome(message):
 		bot.send_photo(message.from_user.id, get(
             "https://sun9-40.userapi.com/iVohXW_PwM2mMNK9A8Y8fSb8TDgio-_o46b9eQ/FcbNo0Al2Dk.jpg").content)
 		bot.send_message(message.from_user.id,
-                         " ,Кристина Касаткина inst:k_baby_doll_5i4, VK:https://vk.com/id434274288")
+                         " Кристина Касаткина inst:k_baby_doll_5i4, VK:https://vk.com/id434274288")
 	elif '/лейла' in message.text.lower():
 		bot.send_photo(message.from_user.id, get(
             "https://sun9-66.userapi.com/4QthDe5aDLzXfgNScobMx8CBjAsSQ_Tinpe0uQ/HVKcmwslhe8.jpg").content)
