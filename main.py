@@ -103,6 +103,7 @@ sumsa = ""
 
 def func(message):
 	global quess
+	global name_test
 	name_test += quess + ol
 	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
 	bot.register_next_step_handler(message, fun)
@@ -129,7 +130,6 @@ def fuck(message):
 	global name_test
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
-	name_test += quess + ol
 
 	
 def sam(message,quess,qs1,vr1):
