@@ -18,6 +18,8 @@ def send_welcome(message):
 	if message.text.lower() == "/тестромакасаткин":
 		bot.send_message(message.chat.id, "Вопроc 1:Какой любимый день недели?")
 		bot.register_next_step_handler(message,ques2)
+	else:
+		bot.register_next_step_handler(message, cot)
 def ques2(message):
 	global score
 	guess1 = message.text.lower()
@@ -66,9 +68,12 @@ def ques6(message):
 		score += 1
 		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
 		achieve = "Тест Ромы пройден на", score, "очков"
+		bot.register_next_step_handler(message, cot)
 	else:
 		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
 		achieve = "Тест Ромы пройден на", score, "очков"
+		bot.register_next_step_handler(message, cot)
+def cot(message):
 	if message.text.lower() == "я серый":
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я рома":
