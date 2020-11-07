@@ -104,7 +104,7 @@ def func(message):
 	global quess
 	global  name_test
 	quess = message.text.lower()
-	name_test = quess
+	name_test += quess
 	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
 	bot.register_next_step_handler(message, fun)
 
@@ -113,7 +113,7 @@ def fun(message):
 	global qs1
 	qs1 = message.text.lower()
 	bot.send_message(message.chat.id,
-                     "Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта.Только 3 варианта!!")
+                     "Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта")
 	bot.register_next_step_handler(message, funs)
 
 
