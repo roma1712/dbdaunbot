@@ -129,7 +129,7 @@ def fuck(message):
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
 def sam(message,quess,qs1,vr1):
-	bot.send_message(message.chat.id, quess + qs1 + vr1 + vb)
+	bot.send_message(message.chat.id, str(quess + qs1 + vr1 + vb))
 	proverka
 	if score == 0:
 		bot.send_message(message.chat.id, "Плохо")
