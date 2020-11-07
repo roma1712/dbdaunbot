@@ -149,7 +149,7 @@ def proverka(message):
 def fifa(message):
 	fool = message.text.lower()
 	if fool == quess:
-		bot.send_message(message.chat.id,sam(fool))
+		bot.send_message(message.chat.id,sam(quess))
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 		
