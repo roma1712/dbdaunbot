@@ -92,7 +92,7 @@ def send_welcome(message):
 		bot.send_message(message.chat.id,constants.random_message())
 fool = ""
 name_test = ""
-test = ""
+
 quess = ""
 qs1 = ""
 vr1 = ""
@@ -133,7 +133,7 @@ def fuck(message):
 
 	
 def sam(message,quess,qs1,vr1):
-	bot.send_message(message.chat.id, ("str(qs1),str(vr1)")
+	bot.send_message(message.chat.id, ("str(qs1),str(vr1)"))
 	proverka
 	if score == 0:
 		bot.send_message(message.chat.id, "Плохо")
