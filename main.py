@@ -126,12 +126,11 @@ def funs(message):
 
 def fuck(message):
 	global an1
-	global test
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
 def sam(message,quess,qs1,vr1):
-	bot.send_message(message.chat.id, quess + qs1 +vr1+vb)
-	proverka()
+	bot.send_message(message.chat.id, quess + qs1 + vr1 + vb)
+	proverka
 	if score == 0:
 		bot.send_message(message.chat.id, "Плохо")
 	elif score == 1:
@@ -146,6 +145,9 @@ def proverka(message):
 def fifa(message):
 	fool = message.text.lower()
 	if fool == quess:
-		bot.send_message(message.chat.id,sam(func()))
+		bot.send_message(message.chat.id,sam(func(quess)))
+	else:
+		bot.send_message(message.chat.id,constants.random_message())
+		
 	
 bot.polling(none_stop=True)
