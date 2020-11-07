@@ -85,8 +85,8 @@ guess4 = ""
 guess5 = ""
 def ques1(message):
 	if message.text.lower() == "/тестромакасаткин":
-			bot.send_message(message.chat.id,"Вопроc 1:Какой любимый день недели?")
-			bot.register_next_step_handler(message,ques2)
+		bot.send_message(message.chat.id,"Вопроc 1:Какой любимый день недели?")
+		bot.register_next_step_handler(message,ques2)
 def ques2(message):
 	global score
 	guess1 = message.text.lower()
