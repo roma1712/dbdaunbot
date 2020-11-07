@@ -48,10 +48,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Пусть Ярослава Нечаева скинет свои сиськи в лс")
 	elif message.text.lower() == "Касаткина":
 		bot.send_message(message.from_user.id, "Иди нахуй Кристина блять")
-	elif 'касаткин' in message.text.lower():
-		bot.send_message(message.from_user.id, "Он мой босс!")
-	elif 'рома' in message.text.lower():
-		bot.send_message(message.from_user.id, "Он мой босс!")
 	elif message.text.lower() == "я ярик":
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я лиза хлопкова":
