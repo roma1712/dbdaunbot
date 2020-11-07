@@ -62,6 +62,7 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Он мой босс!")
 	elif message.text.lower() == "привет":
 		audio = open(r'C:\Users\Lenovo\Downloads\a85c2fe0bd.mp3', 'rb')
+		bot.send_chat_action(message.from_user.id, 'upload_audio')
 		bot.send_audio(message.chat.id, audio)
 		audio.close()
 	elif message.text.lower() == "я ярик":
