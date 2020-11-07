@@ -147,10 +147,11 @@ def ques6(message):
 	quess5 = message.text.lower()
 	if quess5 == "черный":
 		score += 1
-		if score == 0
+		bot.register_next_step_handler(message, check)
 	else:
 		score += 0
-
+		bot.register_next_step_handler(message, check)
+def check(score)
 	if score == 0:
 		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Ужасно!")
 		bot.register_next_step_handler(message, send_welcome)
