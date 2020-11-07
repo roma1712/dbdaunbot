@@ -72,6 +72,22 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Господи сын шлюхи,сдохшей в канаве и умертвленной твоим отчимом,соизволь написать побольше букв")
 	elif 'бокс' in message.text.lower():
 		bot.send_photo(message.from_user.id,get("https://sun9-34.userapi.com/icEy8U9BKkM4Ud0s2SD72tbmMSIZ7-9bnSy2dA/2cdUQjpy60s.jpg").content)
+	elif '/лизах' in message.text.lower():
+		bot.send_photo(message.from_user.id,get("https://sun9-45.userapi.com/c856124/v856124691/24cd50/bCE4R3sFEZw.jpg").content)
+		bot.send_message(message.from_user.id,"Лиза Хлопкова , inst:_sergeeva76_, VK:https://vk.com/sssergeeva76")
+	elif '/дб' in message.text.lower():
+		bot.send_photo(message.from_user.id,get("https://sun9-33.userapi.com/c857628/v857628268/188863/L3ptZ3l59bc.jpg").content)
+		bot.send_message(message.from_user.id,"Дима Баранов , inst:dimooooooon8271, VK:https://vk.com/didibek")
+	elif '/ярик' in message.text.lower():
+		bot.send_photo(message.from_user.id,get("https://sun9-57.userapi.com/c855616/v855616340/91075/bzyIHJPDtz0.jpg").content)
+		bot.send_message(message.from_user.id,"Ярик Бондаренко , inst:footballercs_11, VK:https://vk.com/id404167028")
+	elif '/кристинак' in message.text.lower():
+		bot.send_photo(message.from_user.id,get("https://sun9-40.userapi.com/iVohXW_PwM2mMNK9A8Y8fSb8TDgio-_o46b9eQ/FcbNo0Al2Dk.jpg").content)
+		bot.send_message(message.from_user.id," ,Кристина Касаткина inst:k_baby_doll_5i4, VK:https://vk.com/id434274288")
+	elif '/лейла' in message.text.lower():
+		bot.send_photo(message.from_user.id,get("https://sun9-66.userapi.com/4QthDe5aDLzXfgNScobMx8CBjAsSQ_Tinpe0uQ/HVKcmwslhe8.jpg").content)
+		bot.send_message(message.from_user.id,"Лейла Обухова , inst:lil_lleyla, VK:https://vk.com/leylek_17")
+
 	
 
 	else:
