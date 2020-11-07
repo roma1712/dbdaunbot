@@ -81,101 +81,69 @@ def send_welcome(message):
 		bot.send_photo(message.from_user.id, get(
             "https://sun9-66.userapi.com/4QthDe5aDLzXfgNScobMx8CBjAsSQ_Tinpe0uQ/HVKcmwslhe8.jpg").content)
 		bot.send_message(message.from_user.id, "Лейла Обухова , inst:lil_lleyla, VK:https://vk.com/leylek_17")
-	elif message.text.lower() == "/achieve":
-		bot.send_message(message.chat.id, achieve)
-	elif message.text.lower() == "/тестромы":
-		bot.send_message(message.chat.id, "Вопроc 1:Какой любимый день недели?")
-		bot.register_next_step_handler(message,ques2)
+	elif message.text.lower() == "/всетесты":
+		bot.send_message(message.chat.id, name_test)
+		if message.text.lower() == quess:
+			bot.send_message(message.chat.id, sam())
+		
+	elif message.text.lower() == "/свойтест":
+		bot.register_next_step_handler(message,func)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-score = 0
-achieve =""
-guess1 = ""
-quess2 = ""
-quess3 = ""
-quess4 = ""
-quess5 = ""
-def ques2(message):
-	global score
-	guess1 = message.text.lower()
-	if guess1 == "суббота" :
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-		bot.register_next_step_handler(message, ques3)
-	else:
-		score += 0
-		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
-		bot.register_next_step_handler(message, ques3)
-def ques3(message):
-	global score
-	quess2 = message.text.lower()
-	if quess2 == "ночь":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-		bot.register_next_step_handler(message, ques4)
-	else:
-		score += 0
-		bot.send_message(message.chat.id, "Вопроc 3:Что любит больше:чай или кофе")
-		bot.register_next_step_handler(message, ques4)
-def ques4(message):
-	global score
-	quess3 = message.text.lower()
-	if quess3 == "кофе":
-		score += 1
-		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-		bot.register_next_step_handler(message, ques5)
-	
-	else:
-		score += 0
-		bot.send_message(message.chat.id, "Вопроc 4:Деньги или любовь")
-		bot.register_next_step_handler(message, ques5)
-def ques5(message):
-	
-	quess4 = message.text.lower()	
-	global score
-	if quess4 == "деньги":
-		score += 1
-		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-		bot.register_next_step_handler(message, ques6)
-	else:
-		score += 0
-		bot.send_message(message.chat.id, "Вопрос 5: Любимый цвет")
-		bot.register_next_step_handler(message, ques6)
-def ques6(message):
-	global score
-	global achieve
-	quess5 = message.text.lower()
-	if quess5 == "черный":
-		score += 1
-	else:
-		score += 0
+
+name_test = ""
+test = ""
+quess = ""
+qs1 = ""
+vr1 = ""
+an1 = ""
+
+
+def func(message):
+	global quess
+	global  name_test
+	bot.send_message(message.chat.id,
+                     "Напишите как будет называться ваш тест.Обязательно через / ,маленькими буквами.Например : /тестромы ,без пробела!!!")
+	quess = message.text.lower()
+	name_test = quess
+	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
+	bot.register_next_step_handler(message, fun)
+
+
+def fun(message):
+	global qs1
+	qs1 = message.text.lower()
+	bot.send_message(message.chat.id,
+                     "Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта.Только 3 варианта!!")
+	bot.register_next_step_handler(message, funs)
+
+
+def funs(message):
+	global vr1
+	vr1 = message.text.lower()
+	bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+	bot.register_next_step_handler(message, fuck)
+
+
+def fuck(message):
+	global an1
+	global test
+	an1 = message.text.lower()
+	bot.send_message(message.chat.id, "Отлично , все создано!")
+	test += func
+def sam(message,quess,qs1,vr1):
+	bot.send_message(message.chat.id, quess + qs1 +vr1)
+	proverka()
 	if score == 0:
-		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Ужасно!")
-		bot.register_next_step_handler(message, send_welcome)
-		achieve += "Вы прошли тест Ромы на 0 очков.Ужасно!"
+		bot.send_message(message.chat.id, "Плохо")
 	elif score == 1:
-		bot.send_message(message.chat.id, "Вы прошли на 1 очков.Отвратительно!")
-		bot.register_next_step_handler(message, send_welcome)
-		achieve += "Вы прошли тест Ромы на 1 очко.Ужасно!"
-	elif score == 2:
-		bot.send_message(message.chat.id, "Вы прошли на 2 очков.Такое себе!")
-		bot.register_next_step_handler(message, send_welcome)
-		achieve += "Вы прошли тест Ромы на 2 очка.Такое себе!"
-	elif score == 3:
-		bot.send_message(message.chat.id, "Вы прошли на 3 очков.Нормально!")
-		bot.register_next_step_handler(message, send_welcome)
-		achieve += "Вы прошли тест Ромы на 3 очка.Нормально!"
-	elif score == 4:
-		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Отлично!")
-		bot.register_next_step_handler(message, send_welcome)
-		achieve += "Вы прошли тест Ромы на 4 очка.Отлично!"
-	elif score == 5:
-		bot.send_message(message.chat.id, "Вы прошли на 0 очков.Я не знаю как тебя зовут,но уже люблю тебя!")
-		bot.register_next_step_handler(message, send_welcome)
-		achieve += "Вы прошли тест Ромы на 5 очков. Я не знаю как тебя зовут,но уже люблю тебя!"
+		bot.send_message(message.chat.id, "Отлично")
 
-
-
-
-
+def proverka(message):
+	global score
+	if message.text.lower() == an1:
+		score += 1
+	else:
+		score += 0
+	
 bot.polling(none_stop=True)
