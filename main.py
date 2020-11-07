@@ -152,6 +152,7 @@ def ques6(message):
 		bot.register_next_step_handler(message, send_welcome)
 		achieve = "Тест Ромы пройден на", str(score), "очков"	
 	else:
+		score += 0
 		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
 		bot.register_next_step_handler(message, send_welcome)
 		achieve = "Тест Ромы пройден на", str(score), "очков"
