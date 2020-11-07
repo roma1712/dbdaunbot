@@ -148,14 +148,14 @@ def ques6(message):
 	quess5 = message.text.lower()
 	if quess5 == "черный":
 		score += 1
-		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
+		bot.send_message(message.chat.id, "Вы набрали", score, "очков!")
 		bot.register_next_step_handler(message, send_welcome)
-		achieve = "Тест Ромы пройден на", str(score), "очков"	
+		achieve = "Тест Ромы пройден на", score, "очков"	
 	else:
 		score += 0
-		bot.send_message(message.chat.id, "Вы набрали", str(score), "очков!")
+		bot.send_message(message.chat.id, "Вы набрали", score, "очков!")
 		bot.register_next_step_handler(message, send_welcome)
-		achieve = "Тест Ромы пройден на", str(score), "очков"
+		achieve = "Тест Ромы пройден на", score, "очков"
 	
 
 
