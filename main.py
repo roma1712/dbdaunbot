@@ -89,7 +89,7 @@ def send_welcome(message):
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 score = 0
-achieve = ""
+achieve =""
 guess1 = ""
 quess2 = ""
 quess3 = ""
@@ -98,7 +98,6 @@ quess5 = ""
 def ques2(message):
 	global score
 	guess1 = message.text.lower()
-	still = True
 	if guess1 == "суббота" :
 		score += 1
 		bot.send_message(message.chat.id, "Вопроc 2:Что любит больше(ночь,день или утро)")
@@ -148,14 +147,14 @@ def ques6(message):
 	quess5 = message.text.lower()
 	if quess5 == "черный":
 		score += 1
-		bot.send_message(message.chat.id, "Вы набрали", score, "очков!")
+		bot.send_message(message.chat.id, "Вы набрали", int(score), "очков!")
 		bot.register_next_step_handler(message, send_welcome)
-		achieve = "Тест Ромы пройден на", score, "очков"	
+		achieve += "Тест Ромы пройден на", int(score), "очков"	
 	else:
 		score += 0
-		bot.send_message(message.chat.id, "Вы набрали", score, "очков!")
+		bot.send_message(message.chat.id, "Вы набрали", int(score), "очков!")
 		bot.register_next_step_handler(message, send_welcome)
-		achieve = "Тест Ромы пройден на", score, "очков"
+		achieve += "Тест Ромы пройден на", int(score), "очков"
 	
 
 
