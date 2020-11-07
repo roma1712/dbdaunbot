@@ -81,23 +81,23 @@ def send_welcome(message):
 		bot.send_photo(message.from_user.id, get(
             "https://sun9-66.userapi.com/4QthDe5aDLzXfgNScobMx8CBjAsSQ_Tinpe0uQ/HVKcmwslhe8.jpg").content)
 		bot.send_message(message.from_user.id, "Лейла Обухова , inst:lil_lleyla, VK:https://vk.com/leylek_17")
-	elif message.text.lower() == "/всетесты":
+	elif message.text.lower() == "/всетесты":		
 		bot.send_message(message.chat.id, name_test)
-		if message.text.lower() == quess:
-			bot.send_message(message.chat.id, sam(func()))
+		bot.register_next_step_handler(message, fifa)
 		
 	elif message.text.lower() == "/свойтест":
 		bot.send_message(message.chat.id,"Напишите как будет называться ваш тест.Обязательно через / ,маленькими буквами.Например : /тестромы ,без пробела!!!")              
 		bot.register_next_step_handler(message,func)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-
+fool = ""
 name_test = ""
 test = ""
 quess = ""
 qs1 = ""
 vr1 = ""
 an1 = ""
+vb = ".Выберете только цифру"
 
 
 def func(message):
@@ -130,7 +130,7 @@ def fuck(message):
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
 def sam(message,quess,qs1,vr1):
-	bot.send_message(message.chat.id, quess + qs1 +vr1)
+	bot.send_message(message.chat.id, quess + qs1 +vr1+vb)
 	proverka()
 	if score == 0:
 		bot.send_message(message.chat.id, "Плохо")
@@ -143,5 +143,9 @@ def proverka(message):
 		score += 1
 	else:
 		score += 0
+def fifa(message):
+	fool = message.text.lower()
+	if fool == quess:
+		bot.send_message(message.chat.id,sam(func()))
 	
 bot.polling(none_stop=True)
