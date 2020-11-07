@@ -42,12 +42,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Сочувствую")
 	elif 'бурдейную' in message.text.lower():
 		bot.send_message(message.from_user.id, "АХАХАХАХАХАХА ну и уебище ты")
-	elif 'хлопкова' in message.text.lower():
-		bot.send_message(message.from_user.id, "Я ее тоже люблю ,брат,стрела тебе")
-	elif 'волгапкина' in message.text.lower():
-		bot.send_message(message.from_user.id, "Сочувствую")
-	elif 'бурдейная' in message.text.lower():
-		bot.send_message(message.from_user.id, "АХАХАХАХАХАХА ну и уебище ты сочувствую")
 	elif '/start' in message.text.lower():
 		bot.send_message(message.from_user.id, "ахахах уебище думало нажмешь старт все заработает?Сын шлюханки...")
 	elif 'кристина' in message.text.lower():
@@ -60,11 +54,6 @@ def send_welcome(message):
 		bot.send_message(message.from_user.id, "Он мой босс!")
 	elif 'рома' in message.text.lower():
 		bot.send_message(message.from_user.id, "Он мой босс!")
-	elif message.text.lower() == "привет":
-		audio = open(r'C:\Users\Lenovo\Downloads\a85c2fe0bd.mp3', 'rb')
-		bot.send_chat_action(message.from_user.id, 'upload_audio')
-		bot.send_audio(message.chat.id, audio)
-		audio.close()
 	elif message.text.lower() == "я ярик":
 		bot.send_message(message.from_user.id, "Мой господин!")
 	elif message.text.lower() == "я лиза хлопкова":
