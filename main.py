@@ -71,7 +71,7 @@ def send_welcome(message):
 	elif len(message.text.lower()) == 1:
 		bot.send_message(message.from_user.id, "Господи сын шлюхи,сдохшей в канаве и умертвленной твоим отчимом,соизволь написать побольше букв")
 	elif 'бокс' in message.text.lower():
-		bot.send_photo(message.from_user.id,get(https://sun9-34.userapi.com/icEy8U9BKkM4Ud0s2SD72tbmMSIZ7-9bnSy2dA/2cdUQjpy60s.jpg).content)
+		bot.send_photo(message.from_user.id,get("https://sun9-34.userapi.com/icEy8U9BKkM4Ud0s2SD72tbmMSIZ7-9bnSy2dA/2cdUQjpy60s.jpg").content)
 	
 
 	else:
