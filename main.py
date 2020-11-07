@@ -133,7 +133,7 @@ def fuck(message):
 	bot.send_message(message.chat.id, "Отлично , все создано!")
 
 	
-def sam(message,quess,qs1,vr1):
+def sam(quess):
 	bot.send_message(message.chat.id, (str(qs1),str(vr1)))
 	bot.register_next_step_handler(message,proverka())
 	if score == 0:
@@ -150,7 +150,7 @@ def proverka(message):
 def fifa(message):
 	fool = message.text.lower()
 	if fool == quess:
-		bot.send_message(message.chat.id,sam(quess))
+		bot.send_message(message.chat.id,sam)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 		
