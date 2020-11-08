@@ -90,7 +90,7 @@ def send_welcome(message):
 		bot.register_next_step_handler(message,func)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-fool = ""
+
 name_test = ""
 
 quess = ""
@@ -146,8 +146,7 @@ def proverka(message):
 	else:
 		score += 0
 def fifa(message):
-	fool = message.text.lower()
-	if fool == quess:
+	if guess in name_test:
 		bot.send_message(message.chat.id,sam)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
