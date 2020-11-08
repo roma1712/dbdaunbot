@@ -113,8 +113,7 @@ def func(message):
 def fun(message):
 	global qs1
 	qs1 = message.text.lower()
-	bot.send_message(message.chat.id,
-                     "Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта")
+	bot.send_message(message.chat.id,"Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта")
 	bot.register_next_step_handler(message, funs)
 
 
@@ -127,13 +126,12 @@ def funs(message):
 
 def fuck(message):
 	global an1
-	
-	global name_test
 	an1 = message.text.lower()
 	bot.send_message(message.chat.id, "Отлично , все создано!")
+	bot.register_next_step_handler(message,sam)
 
 	
-def sam(fool):
+def sam(message):
 	bot.send_message(message.chat.id, (str(qs1),str(vr1)))
 	bot.register_next_step_handler(message,proverka)
 	if score == 0:
