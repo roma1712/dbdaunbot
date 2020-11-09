@@ -90,7 +90,7 @@ def send_welcome(message):
 		bot.register_next_step_handler(message,func)
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
-
+score = 0
 a = ""
 d = ""
 qwer = ""
@@ -133,7 +133,7 @@ def fuck(message):
     global d
     an1 = message.text.lower()
     bot.send_message(message.chat.id, "Отлично , все создано!")
-    a = quess + qs1 + vr1
+    a = quess + " " + qs1  + " " + vr1
     c = an1
     d += c
     b += a
