@@ -368,16 +368,17 @@ def fig(message):
     global j1 
     an10 = message.text.lower()
     bot.send_message(message.chat.id, "Создано!Теперь зайдите в /всетесты")
-    a = quess + qs1 + vr1
-    b = qs2 + vr2
-    c = qs3 + vr3
-    d = qs4 + vr4
-    e = qs5 + vr5
-    f = qs6 + vr6
-    g = qs7 + vr7
-    h = qs8 + vr8
-    i = qs9 + vr9
-    j = qs10 + vr10
+    a = sur + quess +nb + vovc + qs1 + nb + name +  vr1
+    b = vovc + qs2 + nb + name + vr2
+    c = vovc + qs3 + nb + name + vr3
+    d = vovc + qs4 + nb + name + vr4
+    e = vovc + qs5 + nb + name + vr5
+    f = vovc + qs6 + nb + name + vr6
+    g = vovc + qs7 + nb + name + vr7
+    h = vovc + qs8 + nb + name + vr8
+    i = vovc + qs9 + nb + name + vr9
+    j = vovc + qs10 + nb + name + vr10
+
     a1 = an1
     b1 = an2
     c1 = an3
@@ -402,7 +403,7 @@ def nom(message):
     qwer = message.text.lower()
     if qwer == a1:
         score += 1
-        bot.send_message(message.chat.id, "b")
+        bot.send_message(message.chat.id, b)
         bot.register_next_step_handler(message, nos)
     else:
         score += 0
@@ -509,9 +510,33 @@ def nok(message):
         bot.register_next_step_handler(message, nvb)
 
 def nvb(message):
-    global score
-    bot.send_message(message.chat.id, "Вы набрали " + str(score) + "очков")
-    
+	global score
+	if score == 0:
+		bot.send_message(message.chat.id, "Вы набрали 0 баллов")
+	if score == 1:
+		bot.send_message(message.chat.id, "Вы набрали 1 баллов")
+	if score == 2:
+		bot.send_message(message.chat.id, "Вы набрали 2 баллов")
+	if score == 3:
+		bot.send_message(message.chat.id, "Вы набрали 3 баллов")
+	if score == 4:
+		bot.send_message(message.chat.id, "Вы набрали 4 баллов")
+	if score == 5:
+		bot.send_message(message.chat.id, "Вы набрали 5 баллов")
+	if score == 6:
+		bot.send_message(message.chat.id, "Вы набрали 6 баллов")
+	if score == 7:
+		bot.send_message(message.chat.id, "Вы набрали 7 баллов")
+	if score == 8:
+		bot.send_message(message.chat.id, "Вы набрали 8 баллов")
+	if score == 9:
+		bot.send_message(message.chat.id, "Вы набрали 9 баллов")
+	if score == 10:
+		bot.send_message(message.chat.id, "Вы набрали 10 баллов")
+	
+	
+		
+		
 
 
 
