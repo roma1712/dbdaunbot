@@ -91,65 +91,67 @@ def send_welcome(message):
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 
+a = ""
+d = ""
+qwer = ""
 name_test = ""
-
+c = ""
 quess = ""
 qs1 = ""
 vr1 = ""
 an1 = ""
-
-
-
-
+fool = ""
+b = ""
 def func(message):
-	global quess
-	global name_test
-	guess = message.text.lower()
-	name_test += quess 
-	bot.send_message(message.chat.id, "Напишите свой первый вопрос")
-	bot.register_next_step_handler(message, fun)
+    global quess
+    global name_test
+    quess = message.text.lower()
+    name_test += quess
+    bot.send_message(message.chat.id, "Напишите свой первый вопрос")
+    bot.register_next_step_handler(message, fun)
 
 
 def fun(message):
-	global qs1
-	qs1 = message.text.lower()
-	bot.send_message(message.chat.id,"Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта")
-	bot.register_next_step_handler(message, funs)
+    global qs1
+    qs1 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, funs)
 
 
 def funs(message):
-	global vr1
-	vr1 = message.text.lower()
-	bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
-	bot.register_next_step_handler(message, fuck)
+    global vr1
+    vr1 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, fuck)
 
 
 def fuck(message):
-	global an1
-	an1 = message.text.lower()
-	bot.send_message(message.chat.id, "Отлично , все создано!")
-	bot.register_next_step_handler(message,sam)
-
-	
-def sam(message):
-	bot.send_message(message.chat.id, (str(qs1),str(vr1)))
-	bot.register_next_step_handler(message,proverka)
-	if score == 0:
-		bot.send_message(message.chat.id, "Плохо")
-	elif score == 1:
-		bot.send_message(message.chat.id, "Отлично")
-
-def proverka(message):
-	global score
-	if message.text.lower() == an1:
-		score += 1
-	else:
-		score += 0
+    global an1
+    global c
+    global b
+    global a
+    global d
+    an1 = message.text.lower()
+    bot.send_message(message.chat.id, "Отлично , все создано!")
+    a = quess + qs1 + vr1
+    c = an1
+    d += c
+    b += a
 def fifa(message):
-	if guess in name_test:
-		bot.send_message(message.chat.id,sam)
-	else:
-		bot.send_message(message.chat.id,constants.random_message())
+
+    fool = message.text.lower()
+    if fool == quess:
+        bot.send_message(message.chat.id,a )
+        bot.register_next_step_handler(message, nom)
+def nom(message):
+    global score
+    qwer = message.text.lower()
+    if qwer == c:
+        score +=1
+        bot.send_message(message.chat.id,"Вы набрали 1 балл")
+    else:
+        score += 0
+        bot.send_message(message.chat.id,"Вы набрали 0 баллов")
 		
 	
 bot.polling(none_stop=True)
