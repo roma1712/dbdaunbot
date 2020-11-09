@@ -345,6 +345,7 @@ def vovs(message):
 
 
 def fig(message):
+
     global an10
     global a 
     global b
@@ -365,19 +366,22 @@ def fig(message):
     global g1 
     global h1 
     global i1 
-    global j1 
+    global j1
+    global vovc
+    global name
+    gloval sur
     an10 = message.text.lower()
     bot.send_message(message.chat.id, "Создано!Теперь зайдите в /всетесты")
-    a = sur + quess +nb + vovc + qs1 + nb + name +  vr1
-    b = vovc + qs2 + nb + name + vr2
-    c = vovc + qs3 + nb + name + vr3
-    d = vovc + qs4 + nb + name + vr4
-    e = vovc + qs5 + nb + name + vr5
-    f = vovc + qs6 + nb + name + vr6
-    g = vovc + qs7 + nb + name + vr7
-    h = vovc + qs8 + nb + name + vr8
-    i = vovc + qs9 + nb + name + vr9
-    j = vovc + qs10 + nb + name + vr10
+    a = sur + quess  + vovc + qs1  + name +  vr1
+    b = vovc + qs2  + name + vr2
+    c = vovc + qs3 + name + vr3
+    d = vovc + qs4  + name + vr4
+    e = vovc + qs5  + name + vr5
+    f = vovc + qs6  + name + vr6
+    g = vovc + qs7  + name + vr7
+    h = vovc + qs8  + name + vr8
+    i = vovc + qs9 + name + vr9
+    j = vovc + qs10  + name + vr10
 
     a1 = an1
     b1 = an2
@@ -407,7 +411,7 @@ def nom(message):
         bot.register_next_step_handler(message, nos)
     else:
         score += 0
-        bot.send_message(message.chat.id, "b")
+        bot.send_message(message.chat.id, b)
         bot.register_next_step_handler(message, nos)
 def nos(message):
     global score
@@ -500,7 +504,6 @@ def nol(message):
 def nok(message):
     global score
     global smc
-    
     smc = message.text.lower()
     if smc == j1:
         score += 1
