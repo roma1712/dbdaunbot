@@ -369,7 +369,7 @@ def fig(message):
     global j1
     global vovc
     global name
-    gloval sur
+    global sur
     an10 = message.text.lower()
     bot.send_message(message.chat.id, "Создано!Теперь зайдите в /всетесты")
     a = sur + quess  + vovc + qs1  + name +  vr1
