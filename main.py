@@ -91,17 +91,62 @@ def send_welcome(message):
 	else:
 		bot.send_message(message.chat.id,constants.random_message())
 score = 0
-a = ""
-d = ""
 qwer = ""
 name_test = ""
-c = ""
 quess = ""
 qs1 = ""
 vr1 = ""
 an1 = ""
 fool = ""
+qs2 = "" 
+vr2 = ""
+an2 = ""
+qs3 = "" 
+vr3 = ""
+an3 = ""
+qs4 = "" 
+vr4 = ""
+an4 = ""
+qs5 = "" 
+vr5 = ""
+an5 = ""
+qs6 = "" 
+vr6 = ""
+an6 = ""
+qs7 = "" 
+vr7 = ""
+an7 = ""
+qs8 = "" 
+vr8 = ""
+an8 = ""
+qs9 = "" 
+vr9 = ""
+an9 = ""
+qs10 = "" 
+vr10= ""
+an10 = ""
+a = ""
 b = ""
+c = ""
+d = ""
+e = ""
+f = ""
+h = ""
+g = ""
+i  = ""
+j = ""
+a1 = ""
+b1= ""
+c1 = ""
+d1= ""
+e1= ""
+f1= ""
+h1= ""
+g1= ""
+i1  = ""
+j1 = ""
+
+
 def func(message):
     global quess
     global name_test
@@ -114,7 +159,7 @@ def func(message):
 def fun(message):
     global qs1
     qs1 = message.text.lower()
-    bot.send_message(message.chat.id, "Какие будут варианты ответа?Оформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
     bot.register_next_step_handler(message, funs)
 
 
@@ -127,31 +172,365 @@ def funs(message):
 
 def fuck(message):
     global an1
-    global c
-    global b
-    global a
-    global d
     an1 = message.text.lower()
-    bot.send_message(message.chat.id, "Отлично , все создано!")
-    a = quess + " " + qs1  + " " + vr1
-    c = an1
-    d += c
-    b += a
-def fifa(message):
+    bot.send_message(message.chat.id, "Напишите свой второй вопрос")
+    bot.register_next_step_handler(message, fue)
+def fue(message):
+    global qs2
+    qs2 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, fad)
 
+
+def fad(message):
+    global vr2
+    vr2 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, ful)
+
+
+def ful(message):
+    global an2
+    an2 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши третий вопрос")
+    bot.register_next_step_handler(message, ac)
+
+
+def ac(message):
+    global qs3
+    qs3 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message,asc)
+def asc(message):
+    global vr3
+    vr3 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, sos)
+
+
+def sos(message):
+    global an3
+    an3 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши четвертый вопрос")
+    bot.register_next_step_handler(message, puc)
+
+
+def puc(message):
+    global qs4
+    qs4 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, sis)
+
+
+def sis(message):
+    global vr4
+    vr4 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message,took)
+def took(message):
+    global an4
+    an4 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши пятый вопрос")
+    bot.register_next_step_handler(message, sick)
+
+
+def sick(message):
+    global qs5
+    qs5 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, fock)
+
+
+def fock(message):
+    global vr5
+    vr5 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, acs)
+
+
+def acs(message):
+    global an5
+    an5 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши шестой вопрос")
+    bot.register_next_step_handler(message,big)
+def big(message):
+    global qs6
+    qs6 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, fas)
+
+
+def fas(message):
+    global vr6
+    vr6 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, full)
+
+
+def full(message):
+    global an6
+    an6 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши седьмой вопрос")
+    bot.register_next_step_handler(message, act)
+
+
+def act(message):
+    global qs7
+    qs7 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message,book)
+def book(message):
+    global qs7
+    qs7 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, fav)
+
+
+def fav(message):
+    global vr7
+    vr7 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши восьмой вопрос")
+    bot.register_next_step_handler(message, fulq)
+
+
+def fulq(message):
+    global qs8
+    qs8 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, acz)
+
+
+def acz(message):
+    global vr8
+    vr8 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message,vova)
+def vova(message):
+    global an8
+    an8 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши девятый вопрос")
+    bot.register_next_step_handler(message, fcva)
+
+
+def fcva(message):
+    global qs9
+    qs9 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, fula)
+
+
+def fula(message):
+    global vr9
+    vr9 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, acg)
+
+
+def acg(message):
+    global an9
+    an9 = message.text.lower()
+    bot.send_message(message.chat.id, "Напиши десятый вопрос")
+    bot.register_next_step_handler(message,lol)
+def lol(message):
+    global qs10
+    qs10 = message.text.lower()
+    bot.send_message(message.chat.id, "Какие будут варианты ответа?\nОформление такое:1)Кола,2)Спрайт,3)Фанта")
+    bot.register_next_step_handler(message, vovs)
+
+def vovs(message):
+    global vr10
+    vr10 = message.text.lower()
+    bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
+    bot.register_next_step_handler(message, fig)
+
+
+def fig(message):
+    global an10
+    global a 
+    global b
+    global c
+    global d
+    global e
+    global f
+    global g
+    global i 
+    global h 
+    global j
+    global a1 
+    global b1 
+    global c1 
+    global d1 
+    global e1 
+    global f1 
+    global g1 
+    global h1 
+    global i1 
+    global j1 
+    an10 = message.text.lower()
+    bot.send_message(message.chat.id, "Создано!Теперь зайдите в /всетесты")
+    a = quess + qs1 + vr1
+    b = qs2 + vr2
+    c = qs3 + vr3
+    d = qs4 + vr4
+    e = qs5 + vr5
+    f = qs6 + vr6
+    g = qs7 + vr7
+    h = qs8 + vr8
+    i = qs9 + vr9
+    j = qs10 + vr10
+    a1 = an1
+    b1 = an2
+    c1 = an3
+    d1 = an4
+    e1= an5
+    f1 = an6
+    g1 = an7
+    h1 = an8
+    i1 = an9
+    j1 = an10
+def fifa(message):
+    global fool
     fool = message.text.lower()
     if fool == quess:
-        bot.send_message(message.chat.id,a )
+        bot.send_message(message.chat.id, a)
         bot.register_next_step_handler(message, nom)
+
+
 def nom(message):
     global score
+    global qwer
     qwer = message.text.lower()
-    if qwer == c:
-        score +=1
-        bot.send_message(message.chat.id,"Вы набрали 1 балл")
+    if qwer == a1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, nos)
     else:
         score += 0
-        bot.send_message(message.chat.id,"Вы набрали 0 баллов")
-		
-	
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, nos)
+def nos(message):
+    global score
+    global rot 
+    bot.send_message(message.chat.id, b)
+    rot = message.text.lower()
+    if rot == b1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, noq)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, noq)
+def noq(message):
+    global score
+    global smell
+    bot.send_message(message.chat.id, c)
+    smell = message.text.lower()
+    if smell == c1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, now)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, now)
+def now(message):
+    global score
+    global smel
+    bot.send_message(message.chat.id, d)
+    smel = message.text.lower()
+    if smel == d1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, noe)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, noe)
+def noe(message):
+    global score
+    global sme
+    bot.send_message(message.chat.id, e)
+    sme = message.text.lower()
+    if sme == e1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, noy)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, noy)
+def noy(message):
+    global score
+    global sm
+    bot.send_message(message.chat.id, f)
+    sm = message.text.lower()
+    if sm == f1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, nog)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, nog)
+def nog(message):
+    global score
+    global sma
+    bot.send_message(message.chat.id, g)
+    sma = message.text.lower()
+    if sma == g1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, nol)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, nol)
+def nol(message):
+    global score
+    global smf
+    bot.send_message(message.chat.id, h)
+    smf = message.text.lower()
+    if smf == h1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, nok)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, nok)
+def nok(message):
+    global score
+    global smc
+    bot.send_message(message.chat.id, i)
+    smc = message.text.lower()
+    if smc == i1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, noz)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, noz)
+def noz(message):
+    global score
+    global smn
+    bot.send_message(message.chat.id, j)
+    smn = message.text.lower()
+    if smn == j1:
+        score += 1
+        bot.send_message(message.chat.id, "Правильно!")
+        bot.register_next_step_handler(message, nvb)
+    else:
+        score += 0
+        bot.send_message(message.chat.id, "Неправильно!")
+        bot.register_next_step_handler(message, nvb)
+def nvb(message):
+    global score
+    bot.send_message(message.chat.id, "Вы набрали " + str(score) + "очков")
+    
+
+
+
+
 bot.polling(none_stop=True)
