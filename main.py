@@ -402,129 +402,112 @@ def nom(message):
     qwer = message.text.lower()
     if qwer == a1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, "b")
         bot.register_next_step_handler(message, nos)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, "b")
         bot.register_next_step_handler(message, nos)
 def nos(message):
     global score
     global rot 
-    bot.send_message(message.chat.id, b)
     rot = message.text.lower()
     if rot == b1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, d)
         bot.register_next_step_handler(message, noq)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, d)
         bot.register_next_step_handler(message, noq)
 def noq(message):
     global score
     global smell
-    bot.send_message(message.chat.id, c)
     smell = message.text.lower()
-    if smell == c1:
+    if smell == d1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, e)
         bot.register_next_step_handler(message, now)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, e)
         bot.register_next_step_handler(message, now)
 def now(message):
     global score
     global smel
-    bot.send_message(message.chat.id, d)
     smel = message.text.lower()
-    if smel == d1:
+    if smel == e1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, f)
         bot.register_next_step_handler(message, noe)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, f)
         bot.register_next_step_handler(message, noe)
 def noe(message):
     global score
     global sme
-    bot.send_message(message.chat.id, e)
+  
     sme = message.text.lower()
-    if sme == e1:
+    if sme == f1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id,g)
         bot.register_next_step_handler(message, noy)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, g)
         bot.register_next_step_handler(message, noy)
 def noy(message):
     global score
     global sm
-    bot.send_message(message.chat.id, f)
+    
     sm = message.text.lower()
-    if sm == f1:
+    if sm == g1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, h)
         bot.register_next_step_handler(message, nog)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, h)
         bot.register_next_step_handler(message, nog)
 def nog(message):
     global score
     global sma
-    bot.send_message(message.chat.id, g)
+    
     sma = message.text.lower()
-    if sma == g1:
+    if sma == h1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, i)
         bot.register_next_step_handler(message, nol)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, i)
         bot.register_next_step_handler(message, nol)
 def nol(message):
     global score
     global smf
-    bot.send_message(message.chat.id, h)
+   
     smf = message.text.lower()
-    if smf == h1:
+    if smf == i1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
+        bot.send_message(message.chat.id, j)
         bot.register_next_step_handler(message, nok)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
+        bot.send_message(message.chat.id, j)
         bot.register_next_step_handler(message, nok)
 def nok(message):
     global score
     global smc
-    bot.send_message(message.chat.id, i)
+    
     smc = message.text.lower()
-    if smc == i1:
+    if smc == j1:
         score += 1
-        bot.send_message(message.chat.id, "Правильно!")
-        bot.register_next_step_handler(message, noz)
-    else:
-        score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
-        bot.register_next_step_handler(message, noz)
-def noz(message):
-    global score
-    global smn
-    bot.send_message(message.chat.id, j)
-    smn = message.text.lower()
-    if smn == j1:
-        score += 1
-        bot.send_message(message.chat.id, "Правильно!")
         bot.register_next_step_handler(message, nvb)
     else:
         score += 0
-        bot.send_message(message.chat.id, "Неправильно!")
         bot.register_next_step_handler(message, nvb)
+
 def nvb(message):
     global score
     bot.send_message(message.chat.id, "Вы набрали " + str(score) + "очков")
