@@ -539,36 +539,77 @@ def nok(message):
     smc = message.text.lower()
     if smc == j1:
         score += 1
-        bot.register_next_step_handler(message, nvb)
+        if score == 0:
+            bot.send_message(message.chat.id, "Вы набрали 0 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 1:
+            bot.send_message(message.chat.id, "Вы набрали 1 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 2:
+            bot.send_message(message.chat.id, "Вы набрали 2 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 3:
+            bot.send_message(message.chat.id, "Вы набрали 3 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 4:
+            bot.send_message(message.chat.id, "Вы набрали 4 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 5:
+            bot.send_message(message.chat.id, "Вы набрали 5 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 6:
+            bot.send_message(message.chat.id, "Вы набрали 6 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 7:
+            bot.send_message(message.chat.id, "Вы набрали 7 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 8:
+            bot.send_message(message.chat.id, "Вы набрали 8 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 9:
+            bot.send_message(message.chat.id, "Вы набрали 9 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 10:
+            bot.send_message(message.chat.id, "Вы набрали 10 баллов")
+            bot.register_next_step_handler(message, send_welcome)
     else:
         score += 0
-        bot.register_next_step_handler(message, nvb)
+        if score == 0:
+            bot.send_message(message.chat.id, "Вы набрали 0 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 1:
+            bot.send_message(message.chat.id, "Вы набрали 1 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 2:
+            bot.send_message(message.chat.id, "Вы набрали 2 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 3:
+            bot.send_message(message.chat.id, "Вы набрали 3 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 4:
+            bot.send_message(message.chat.id, "Вы набрали 4 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 5:
+            bot.send_message(message.chat.id, "Вы набрали 5 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 6:
+            bot.send_message(message.chat.id, "Вы набрали 6 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 7:
+            bot.send_message(message.chat.id, "Вы набрали 7 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 8:
+            bot.send_message(message.chat.id, "Вы набрали 8 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 9:
+            bot.send_message(message.chat.id, "Вы набрали 9 баллов")
+            bot.register_next_step_handler(message, send_welcome)
+        if score == 10:
+            bot.send_message(message.chat.id, "Вы набрали 10 баллов")
+            bot.register_next_step_handler(message, send_welcome)
 
 
-def nvb(message):
-    global score
-    if score == 0:
-        bot.send_message(message.chat.id, "Вы набрали 0 баллов")
-    if score == 1:
-        bot.send_message(message.chat.id, "Вы набрали 1 баллов")
-    if score == 2:
-        bot.send_message(message.chat.id, "Вы набрали 2 баллов")
-    if score == 3:
-        bot.send_message(message.chat.id, "Вы набрали 3 баллов")
-    if score == 4:
-        bot.send_message(message.chat.id, "Вы набрали 4 баллов")
-    if score == 5:
-        bot.send_message(message.chat.id, "Вы набрали 5 баллов")
-    if score == 6:
-        bot.send_message(message.chat.id, "Вы набрали 6 баллов")
-    if score == 7:
-        bot.send_message(message.chat.id, "Вы набрали 7 баллов")
-    if score == 8:
-        bot.send_message(message.chat.id, "Вы набрали 8 баллов")
-    if score == 9:
-        bot.send_message(message.chat.id, "Вы набрали 9 баллов")
-    if score == 10:
-        bot.send_message(message.chat.id, "Вы набрали 10 баллов")
+
 
 
 bot.polling(none_stop=True)
