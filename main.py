@@ -87,7 +87,7 @@ def send_welcome(message):
 
     elif message.text.lower() == "/свойтест":
         bot.send_message(message.chat.id,
-                         "Напишите как будет называться ваш тест.Обязательно через / ,маленькими буквами.Например : /тестромы ,без пробела!!!")
+                         "Напишите как будет называться ваш тест\nОбязательно через / ,маленькими буквами\nНапример : /тестдимыбаранова ,без пробела и с фамилией!")
         bot.register_next_step_handler(message, func)
     else:
         bot.send_message(message.chat.id, constants.random_message())
@@ -154,9 +154,17 @@ def func(message):
     global quess
     global name_test
     quess = message.text.lower()
-    name_test += quess
-    bot.send_message(message.chat.id, "Напишите свой первый вопрос")
-    bot.register_next_step_handler(message, fun)
+    if "/" in guess:
+        if len(quess) in guess > 15:
+            name_test += quess
+            bot.send_message(message.chat.id, "Напишите свой первый вопрос")
+            bot.register_next_step_handler(message, fun)
+        else:
+            bot.send_message(message.chat.id, "Напишите  с фамилией!")
+            bot.register_next_step_handler(message, funс)
+    else:
+        bot.send_message(message.chat.id, "Напишите название с '/'")
+        bot.register_next_step_handler(message, func)
 
 
 def fun(message):
@@ -386,16 +394,16 @@ def fig(message):
     global j1
     an10 = message.text.lower()
     bot.send_message(message.chat.id, "Создано!Теперь зайдите в /всетесты")
-    a = "Название: " + quess +  "   " + "Вопрос: " + qs1 + "   "+ "Варианты ответов: " + vr1
-    b = "Вопрос: " + qs2 + "   "+ "Варианты ответов: " + vr2
-    c = "Вопрос: " + qs3 +  "   "+ "Варианты ответов: "+vr3
-    d = "Вопрос: " + qs4 + "   "+"Варианты ответов: "+ vr4
-    e = "Вопрос: " + qs5 + "   "+"Варианты ответов: "+ vr5
-    f = "Вопрос: " + qs6 + "   "+"Варианты ответов: "+ vr6
-    g = "Вопрос: " + qs7 + "   "+"Варианты ответов: "+ vr7
-    h = "Вопрос: " + qs8 + "   "+"Варианты ответов: "+ vr8
-    i ="Вопрос: " + qs9 + "   "+"Варианты ответов: " + vr9
-    j = "Вопрос: " + qs10 + "   "+"Варианты ответов: " + vr10
+    a = "Название: " + quess +  "\n" + "Вопрос: " + qs1 + "\n"+ "Варианты ответов: " + vr1
+    b = "Вопрос: " + qs2 + "\n" + "Варианты ответов: " + vr2
+    c = "Вопрос: " + qs3 +"\n" + "Варианты ответов: "+vr3
+    d = "Вопрос: " + qs4 + "\n" +"Варианты ответов: "+ vr4
+    e = "Вопрос: " + qs5 + "\n "+"Варианты ответов: "+ vr5
+    f = "Вопрос: " + qs6 + "\n "+"Варианты ответов: "+ vr6
+    g = "Вопрос: " + qs7 + "\n" +"Варианты ответов: "+ vr7
+    h = "Вопрос: " + qs8 + "\n" +"Варианты ответов: "+ vr8
+    i ="Вопрос: " + qs9 + "\n"+"Варианты ответов: " + vr9
+    j = "Вопрос: " + qs10 + "\n "+"Варианты ответов: " + vr10
 
     a1 = an1
     b1 = an2
