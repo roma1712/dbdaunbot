@@ -155,16 +155,15 @@ def func(message):
     global name_test
     quess = message.text.lower()
     if "/" in guess:
-        if len(quess) in guess > 15:
+        if len(quess) > 15:
             name_test += quess
-            bot.send_message(message.chat.id, "Напишите свой первый вопрос")
+            bot.send_message(message.chat.id, "Напишите свой первый вопрос")           
             bot.register_next_step_handler(message, fun)
-        else:
-            bot.send_message(message.chat.id, "Напишите  с фамилией!")
-            bot.register_next_step_handler(message, funс)
+        else:            
+            bot.send_message(message.chat.id, "Создай заново , но уже с фамилией")
     else:
-        bot.send_message(message.chat.id, "Напишите название с '/'")
-        bot.register_next_step_handler(message, func)
+        bot.send_message(message.chat.id, "Создай заново , но уже с '/'")
+        
 
 
 def fun(message):
