@@ -668,6 +668,5 @@ def nok(message):
             bot.register_next_step_handler(message, send_welcome)
 
 
-
 bot.polling(none_stop=True)
 
