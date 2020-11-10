@@ -86,6 +86,9 @@ def send_welcome(message):
         bot.register_next_step_handler(message, fifa)
     elif message.text.lower() == "/достижения":
         bot.send_message(message.chat.id, achiev)
+    elif message.text.lower() == "/start":
+        
+        bot.send_message(message.chat.id,"Если вы хотите создать тест нажмите /свойтест\nЕсли вы хоите пройти тест то нажмите /всетесты\nЕсли вы хотите посмотреть сколько тестов и как вы их прошли нажмите /достижения")
 
 
     elif message.text.lower() == "/свойтест":
@@ -303,14 +306,14 @@ def act(message):
 
 
 def book(message):
-    global qs7
+    global vr7
     qs7 = message.text.lower()
     bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
     bot.register_next_step_handler(message, fav)
 
 
 def fav(message):
-    global vr7
+    global an7
     vr7 = message.text.lower()
     bot.send_message(message.chat.id, "Напиши восьмой вопрос")
     bot.register_next_step_handler(message, fulq)
