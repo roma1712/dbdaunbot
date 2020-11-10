@@ -154,7 +154,7 @@ def func(message):
     global quess
     global name_test
     quess = message.text.lower()
-    if "/" in guess:
+    if "/" in quess:
         if len(quess) > 15:
             name_test += quess
             bot.send_message(message.chat.id, "Напишите свой первый вопрос")           
