@@ -554,57 +554,57 @@ def nok(message):
         score += 1      
         if score == 0:
             bot.send_message(message.chat.id, "Вы набрали 0 баллов")
-            achieve = quess + "  Вы набрали 0 баллов"
+            achieve = quess + "  Вы набрали 0 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 1:
             bot.send_message(message.chat.id, "Вы набрали 1 баллов")
-            achieve = quess + "  Вы набрали 1 баллов"
+            achieve = quess + "  Вы набрали 1 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 2:
             bot.send_message(message.chat.id, "Вы набрали 2 баллов")
-            achieve = quess + "  Вы набрали 2 баллов"
+            achieve = quess + "  Вы набрали 2 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 3:
             bot.send_message(message.chat.id, "Вы набрали 3 баллов")
-            achieve = quess + "  Вы набрали 3 баллов"
+            achieve = quess + "  Вы набрали 3 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 4:
             bot.send_message(message.chat.id, "Вы набрали 4 баллов")
-            achieve = quess + "  Вы набрали 4 баллов"
+            achieve = quess + "  Вы набрали 4 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 5:
             bot.send_message(message.chat.id, "Вы набрали 5 баллов")
-            achieve = quess + "  Вы набрали 5 баллов"
+            achieve = quess + "  Вы набрали 5 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 6:
             bot.send_message(message.chat.id, "Вы набрали 6 баллов")
-            achieve = quess + "  Вы набрали 6 баллов"
+            achieve = quess + "  Вы набрали 6 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 7:
             bot.send_message(message.chat.id, "Вы набрали 7 баллов")
-            achieve = quess + "  Вы набрали 7 баллов"
+            achieve = quess + "  Вы набрали 7 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 8:
             bot.send_message(message.chat.id, "Вы набрали 8 баллов")
-            achieve = quess + "  Вы набрали 8 баллов"
+            achieve = quess + "  Вы набрали 8 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 9:
             bot.send_message(message.chat.id, "Вы набрали 9 баллов")
-            achieve = quess + "  Вы набрали 9 баллов"
+            achieve = quess + "  Вы набрали 9 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 10:
             bot.send_message(message.chat.id, "Вы набрали 10 баллов")
-            achieve = quess + "  Вы набрали 10 баллов"
+            achieve = quess + "  Вы набрали 10 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
 
@@ -613,57 +613,57 @@ def nok(message):
         score += 0
         if score == 0:
             bot.send_message(message.chat.id, "Вы набрали 0 баллов")
-            achieve = quess + "  Вы набрали 0 баллов"
+            achieve = quess + "  Вы набрали 0 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 1:
             bot.send_message(message.chat.id, "Вы набрали 1 баллов")
-            achieve = quess + "  Вы набрали 1 баллов"
+            achieve = quess + "  Вы набрали 1 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 2:
             bot.send_message(message.chat.id, "Вы набрали 2 баллов")
-            achieve = quess + "  Вы набрали 2 баллов"
+            achieve = quess + "  Вы набрали 2 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 3:
             bot.send_message(message.chat.id, "Вы набрали 3 баллов")
-            achieve = quess + "  Вы набрали 3 баллов"
+            achieve = quess + "  Вы набрали 3 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 4:
             bot.send_message(message.chat.id, "Вы набрали 4 баллов")
-            achieve = quess + "  Вы набрали 4 баллов"
+            achieve = quess + "  Вы набрали 4 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 5:
             bot.send_message(message.chat.id, "Вы набрали 5 баллов")
-            achieve = quess + "  Вы набрали 5 баллов"
+            achieve = quess + "  Вы набрали 5 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 6:
             bot.send_message(message.chat.id, "Вы набрали 6 баллов")
-            achieve = quess + "  Вы набрали 6 баллов"
+            achieve = quess + "  Вы набрали 6 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 7:
             bot.send_message(message.chat.id, "Вы набрали 7 баллов")
-            achieve = quess + "  Вы набрали 7 баллов"
+            achieve = quess + "  Вы набрали 7 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 8:
             bot.send_message(message.chat.id, "Вы набрали 8 баллов")
-            achieve = quess + "  Вы набрали 8 баллов"
+            achieve = quess + "  Вы набрали 8 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 9:
             bot.send_message(message.chat.id, "Вы набрали 9 баллов")
-            achieve = quess + "  Вы набрали 9 баллов"
+            achieve = quess + "  Вы набрали 9 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
         if score == 10:
             bot.send_message(message.chat.id, "Вы набрали 10 баллов")
-            achieve = quess + "  Вы набрали 10 баллов"
+            achieve = quess + "  Вы набрали 10 баллов" + "\n"
             achiev += achieve 
             bot.register_next_step_handler(message, send_welcome)
 
