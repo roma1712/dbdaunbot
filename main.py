@@ -307,7 +307,7 @@ def act(message):
 
 def book(message):
     global vr7
-    qs7 = message.text.lower()
+    vr7 = message.text.lower()
     bot.send_message(message.chat.id, "Какой будет правильный ответ.Выбери только цифру")
     bot.register_next_step_handler(message, fav)
 
